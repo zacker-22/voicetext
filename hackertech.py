@@ -30,7 +30,7 @@ class Upload(tornado.web.RequestHandler):
         #print fileinfo['body']
 
         r = sr.Recognizer()
-        with sr.AudioFile('G:/dev2.wav') as source:
+        with sr.AudioFile(__UPLOADS__+cname) as source:
 
             audio = r.record(source)
             command = r.recognize_google(audio)
