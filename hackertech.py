@@ -5,6 +5,11 @@ import tornado.web
 import os, uuid
 from image_process import dirty_percentage
 
+import speech_recognition as sr
+
+
+
+
 
 __UPLOADS__ = "./uploads/"
 
@@ -24,13 +29,16 @@ class Upload(tornado.web.RequestHandler):
         fh.write(fileinfo['body'])
         #print fileinfo['body']
 
-        result=dirty_percentage("uploads/"+cname)
-        self.add_header("Access-Control-Allow-Origin", "*")
-        if(float(result)<25.00000000):
-            self.render("result.html", result = result)
+        r = sr.Recognizer()
+        with sr.AudioFile('G:/dev2.wav') as source:
 
-        else:
-            self.render("result2.html", result = result)
+            audio = r.record(source)
+            command = r.recognize_google(audio)
+        print command
+        
+        self.render("result.html", result = command)
+
+        
 
 
 application = tornado.web.Application([
