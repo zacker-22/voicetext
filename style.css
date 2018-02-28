@@ -1,0 +1,66 @@
+body{
+	margin:0;
+	overflow-x: hidden;
+}
+nav{
+	background: transparent !important;
+	box-shadow: none !important;
+}
+nav a {
+	color: black !important;
+}
+.main-wrapper{
+	min-height: 100vh;
+	/*background: url('hand.gif') no-repeat;*/
+	position: relative;
+}
+.arrow1 {
+  box-sizing: border-box;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  border-style: solid;
+  border-color: black;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+ 
+}
+
+.arrow1:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+.container1 {
+  align-items: center;
+  justify-content: center;
+  /*background: url('hand.gif') no-repeat;*/
+}
+
+
+#mainImage{
+	border-bottom: 1px solid black;
+	padding: 5px;
+}
+
+@media only screen and (max-width: 992px){
+	nav .brand-logo
+	{
+    	left: 84%
+    }
+}
+html, body {
+    height:100%;
+} 
+
+body {
+    background-color: white;
+    background-image: url('bg.jpg');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+}

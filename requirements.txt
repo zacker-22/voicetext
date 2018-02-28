@@ -1,0 +1,10 @@
+enum34==1.1.6
+numpy==1.13.1
+oauthlib==2.0.1
+olefile==0.44
+opencv-python==3.3.0.10
+pillow==4.0.0
+protobuf==3.2.0
+requests==2.13.0
+requests-oauthlib==0.8.0
+tornado==4.4.2
