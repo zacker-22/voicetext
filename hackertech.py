@@ -34,7 +34,7 @@ class Upload(tornado.web.RequestHandler):
 
             audio = r.record(source)
             command = r.recognize_google(audio)
-        print command
+        #print command
         
         self.render("result.html", result = command)
 
