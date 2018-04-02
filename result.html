@@ -32,7 +32,7 @@
 		            <div class="card-content white-text">
 		              <!-- <span class="card-title">Card Title</span> -->
 		              <p>Your audio Contained : {{ result }} <br></p>
-		              {% if string1==result %}
+		              {% if string1 in result %}
 		              	<p> Your audio matched</p><br>
 		              {% elif string1!=result  %}
 		              	<p> Your audio did not match</p><br>
